@@ -1,4 +1,3 @@
-import { userInfo } from 'os';
 import React, { FC } from 'react';
 import { IPost } from '../../types/types';
 import { PostsItem } from '../posts-item/PostsItem';
