@@ -1,5 +1,28 @@
 .pageWrapper {
+  position: relative;
   margin: 0 auto;
   max-width: var(--desktop-width);
   box-sizing: border-box;
+}
+
+.pageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 245px;
+  right: 0;
+  width: 311px;
+  height: 330px;
+  background: url('../../../assets/img/bloggers-background.svg') 50% 50%
+    no-repeat;
+}
+
+.pageWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 311px;
+  height: 330px;
+  background: url('../../../assets/img/bloggers-background-bottom.svg') 50% 50%
+    no-repeat;
 }
