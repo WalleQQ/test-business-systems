@@ -1,16 +1,11 @@
 import React, { FC, useEffect } from 'react';
 import { usePosts } from '../../hooks/UsePosts';
 import { PostsList } from '../posts-list/PostsList';
+import { Loader } from '../ui/loader/Loader';
 import styles from './Posts.module.css';
 
 export const Posts: FC = () => {
-  const { posts, loading, error, fetchPosts } = usePosts();
-
-  // console.log('posts', posts);
-
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  const { posts, loading, error } = usePosts();
 
   if (error)
     return (
@@ -19,7 +14,7 @@ export const Posts: FC = () => {
   return (
     <div className={styles.posts}>
       <h2 className={styles.postsTitle}>3 актуальных поста Moriah.Stanton</h2>
-      <PostsList posts={posts} />
+      {loading ? <Loader /> : <PostsList posts={posts} />}
     </div>
   );
 };

@@ -8,12 +8,11 @@ export const usePosts = () => {
   const [error, setError] = useState(false);
 
   const fetchPosts = async () => {
-    console.log(1111);
-
     try {
       setLoading(true);
       const response = await axios.get<IPost[]>(
-        'https://jsonplaceholder.typicode.com/posts?_limit=3'
+        'https://jsonplaceholder.typicode.com/posts/',
+        { params: { _limit: 3 } }
       );
 
       setPosts(response.data);
@@ -24,12 +23,14 @@ export const usePosts = () => {
     }
   };
 
-  const fetchUserPosts = async () => {
-    console.log('sssss');
+  const fetchUserPosts = async (id: any) => {
     try {
       setLoading(true);
       const response = await axios.get<IPost[]>(
-        'https://jsonplaceholder.typicode.com/posts?userId=4'
+        `https://jsonplaceholder.typicode.com/posts?userId=${id}`,
+        {
+          params: { _limit: 3 },
+        }
       );
 
       setPosts(response.data);
@@ -41,8 +42,8 @@ export const usePosts = () => {
   };
 
   useEffect(() => {
-    console.log('wwwww', posts);
-  }, [posts]);
+    fetchPosts();
+  }, []);
 
-  return { posts, loading, error, fetchPosts, fetchUserPosts };
+  return { posts, loading, error, fetchUserPosts };
 };
