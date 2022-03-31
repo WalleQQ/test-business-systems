@@ -1,0 +1,32 @@
+.bloggers {
+  padding: var(--padding-1) var(--padding-3) 0 var(--padding-2);
+}
+
+.bloggers::before {
+  content: '';
+  position: absolute;
+  top: 245px;
+  right: 0;
+  width: 311px;
+  height: 330px;
+  background: url('../../../assets/img/bloggers-background.svg') 50% 50%
+    no-repeat;
+}
+
+.bloggers__title {
+  color: var(--basic-black);
+  font-family: var(--font-semibold);
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-1);
+  margin-bottom: var(--margin-1);
+  text-align: center;
+}
+
+.bloggers__text {
+  color: var(--basic-grey);
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-2);
+  text-align: center;
+  margin: 0 auto var(--margin-2) auto;
+  max-width: 432px;
+}

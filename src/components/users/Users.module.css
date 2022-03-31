@@ -1,0 +1,65 @@
+.swiper {
+  position: relative;
+  padding-top: var(--padding-4);
+}
+
+.swiper__ButtonWrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+}
+
+.imgContainer {
+  height: 290px;
+  height: 320px;
+  position: relative;
+  margin-bottom: var(--margin-3);
+}
+
+.imgContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.userName {
+  font-family: var(--font-medium);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-3);
+  color: var(--basic-black);
+}
+
+.userCompany {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-2);
+  color: var(--basic-grey);
+}
+
+.swiper__item:hover .imgContainer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--basic-orange);
+}
+
+.swiper__item:hover .userName {
+  color: var(--basic-orange);
+}
+
+.swiper__item:hover .userCompany {
+  color: var(--basic-orange);
+}
+
+.error {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-2);
+  color: var(--basic-orange);
+  text-align: center;
+}
