@@ -39,7 +39,7 @@ export const SwiperContainer: FC<SwiperContainerProps> = ({
             className={styles.swiper__item}
           >
             <div className={styles.imgContainer}>
-              <img src={imgUrl(user.id)} />
+              <img src={imgUrl(user.id)} alt={user.name} />
             </div>
             <p className={styles.userName}>{user.name}</p>
             <p className={styles.userCompany}>{user.company.name}</p>

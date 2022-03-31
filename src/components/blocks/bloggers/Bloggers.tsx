@@ -5,7 +5,7 @@ import { Users } from '../../users/Users';
 import styles from './Bloggers.module.css';
 
 export const Bloggers = () => {
-  const { posts, loading, error, fetchUserPosts } = usePosts();
+  const { posts, error, fetchUserPosts } = usePosts();
 
   if (error) {
     return (
