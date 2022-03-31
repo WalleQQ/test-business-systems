@@ -1,6 +1,11 @@
+.swiperWrapper {
+  position: relative;
+}
+
 .swiper {
   position: relative;
   padding-top: var(--padding-4);
+  margin-bottom: var(--margin-1);
 }
 
 .swiper__ButtonWrapper {

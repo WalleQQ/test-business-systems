@@ -1,5 +1,6 @@
 .bloggers {
-  padding: var(--padding-1) var(--padding-3) 0 var(--padding-2);
+  position: relative;
+  padding: var(--padding-1) var(--padding-6) var(--padding-7) var(--padding-2);
 }
 
 .bloggers::before {
@@ -10,6 +11,17 @@
   width: 311px;
   height: 330px;
   background: url('../../../assets/img/bloggers-background.svg') 50% 50%
+    no-repeat;
+}
+
+.bloggers::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 311px;
+  height: 330px;
+  background: url('../../../assets/img/bloggers-background-bottom.svg') 50% 50%
     no-repeat;
 }
 
