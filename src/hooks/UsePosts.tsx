@@ -25,7 +25,6 @@ export const usePosts = () => {
   };
 
   const fetchUserPosts = async () => {
-    console.log('sssss');
     try {
       setLoading(true);
       const response = await axios.get<IPost[]>(
@@ -41,8 +40,8 @@ export const usePosts = () => {
   };
 
   useEffect(() => {
-    console.log('wwwww', posts);
-  }, [posts]);
+    fetchPosts();
+  }, []);
 
-  return { posts, loading, error, fetchPosts, fetchUserPosts };
+  return { posts, loading, error, fetchUserPosts };
 };

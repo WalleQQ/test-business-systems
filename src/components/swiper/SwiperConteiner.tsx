@@ -13,11 +13,7 @@ import { usePosts } from '../../hooks/UsePosts';
 
 SwiperCore.use([Navigation]);
 
-interface SwiperContainerProps {
-  onclick: any;
-}
-
-export const SwiperContainer: FC<SwiperContainerProps> = ({ onclick }) => {
+export const SwiperContainer: FC = () => {
   const navigation = {
     prevEl: '.prevElButton',
     nextEl: '.nextElButton',

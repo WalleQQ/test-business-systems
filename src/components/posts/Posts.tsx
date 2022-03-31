@@ -4,13 +4,7 @@ import { PostsList } from '../posts-list/PostsList';
 import styles from './Posts.module.css';
 
 export const Posts: FC = () => {
-  const { posts, loading, error, fetchPosts } = usePosts();
-
-  // console.log('posts', posts);
-
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  const { posts, loading, error } = usePosts();
 
   if (error)
     return (
