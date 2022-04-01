@@ -10,8 +10,8 @@
   position: absolute;
   top: 245px;
   right: 0;
-  width: 311px;
-  height: 330px;
+  width: var(--width-3);
+  height: var(--height-2);
   background: url('../../../assets/img/bloggers-background.svg') 50% 50%
     no-repeat;
 }
@@ -21,8 +21,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 311px;
-  height: 330px;
+  width: var(--width-3);
+  height: var(--height-2);
   background: url('../../../assets/img/bloggers-background-bottom.svg') 50% 50%
     no-repeat;
 }

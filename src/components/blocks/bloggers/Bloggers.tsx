@@ -5,13 +5,8 @@ import { Users } from '../../users/Users';
 import styles from './Bloggers.module.css';
 
 export const Bloggers = () => {
-  const { posts, error, fetchUserPosts } = usePosts();
+  const { posts, loading, error, fetchUserPosts } = usePosts();
 
-  if (error) {
-    return (
-      <p className={styles.error}>Произошло что-то ужасное...Попробуй снова</p>
-    );
-  }
   return (
     <section className={styles.bloggers}>
       <h2 className={styles.bloggers__title}>Наши топ-блогеры</h2>
@@ -22,7 +17,7 @@ export const Bloggers = () => {
       <Users fetchUserPosts={fetchUserPosts} />
       <div className={styles.posts}>
         <h2 className={styles.postsTitle}>3 актуальных поста Moriah.Stanton</h2>
-        <PostsList posts={posts} />
+        <PostsList posts={posts} error={error} loading={loading} />
       </div>
     </section>
   );

@@ -1,6 +1,14 @@
 .postsList {
-  max-width: 959px;
+  max-width: var(--width-4);
   display: flex;
   flex-direction: column;
-  row-gap: 19px;
+  row-gap: var(--gap-1);
+}
+
+.error {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-2);
+  color: var(--basic-orange);
+  text-align: center;
+  align-self: center;
 }
