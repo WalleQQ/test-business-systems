@@ -18,7 +18,7 @@
   line-height: var(--line-height-2);
   text-align: center;
   margin: 0 auto var(--margin-2) auto;
-  max-width: 432px;
+  max-width: var(--width-1);
 }
 
 .posts {
@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-height: var(--width-1);
 }
 
 .postsTitle {
@@ -44,14 +45,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 78px;
+  width: var(--width-2);
+  height: var(--height-1);
   background: url('../../../assets/img/posts.svg') 50% 50% no-repeat;
-}
-
-.error {
-  font-size: var(--font-size-1);
-  line-height: var(--line-height-2);
-  color: var(--basic-orange);
-  text-align: center;
 }
