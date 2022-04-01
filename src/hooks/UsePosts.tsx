@@ -23,7 +23,7 @@ export const usePosts = () => {
     }
   };
 
-  const fetchUserPosts = async (id: any) => {
+  const fetchUserPosts = async (id: number) => {
     try {
       setLoading(true);
       const response = await axios.get<IPost[]>(

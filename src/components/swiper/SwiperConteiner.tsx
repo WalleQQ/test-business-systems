@@ -12,7 +12,7 @@ SwiperCore.use([Navigation]);
 
 interface SwiperContainerProps {
   users: IUser[];
-  fetchUserPosts: any;
+  fetchUserPosts: (id: number) => Promise<void>;
 }
 
 export const SwiperContainer: FC<SwiperContainerProps> = ({

@@ -7,7 +7,7 @@ import { Loader } from '../ui/loader/Loader';
 import styles from './Users.module.css';
 
 interface UsersProps {
-  fetchUserPosts: any;
+  fetchUserPosts: (id: number) => Promise<void>;
 }
 
 export const Users: FC<UsersProps> = ({ fetchUserPosts }) => {
