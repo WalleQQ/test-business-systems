@@ -4,11 +4,3 @@
   flex-direction: column;
   row-gap: var(--gap-1);
 }
-
-.error {
-  font-size: var(--font-size-1);
-  line-height: var(--line-height-2);
-  color: var(--basic-orange);
-  text-align: center;
-  align-self: center;
-}

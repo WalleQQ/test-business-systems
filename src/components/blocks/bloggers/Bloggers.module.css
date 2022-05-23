@@ -49,3 +49,11 @@
   height: var(--height-1);
   background: url('../../../assets/img/posts.svg') 50% 50% no-repeat;
 }
+
+.error {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-2);
+  color: var(--basic-orange);
+  text-align: center;
+  align-self: center;
+}

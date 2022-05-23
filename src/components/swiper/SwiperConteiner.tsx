@@ -1,23 +1,25 @@
-import React, { FC } from 'react';
-import SwiperCore, { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, {FC, SetStateAction} from 'react';
+import SwiperCore, {Navigation} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import styles from './SwiperConteiner.module.css';
 import 'swiper/css/navigation';
-import { NextButton, PrevButton } from '../ui/button/swiperButton';
-import { IUser } from '../../types/types';
-import { imgUrl } from '../../utils/utils';
+import {NextButton, PrevButton} from '../ui/button/swiperButton';
+import {IUser} from '../../types/types';
+import {imgUrl} from '../../utils/utils';
 
 SwiperCore.use([Navigation]);
 
 interface SwiperContainerProps {
   users: IUser[];
-  fetchUserPosts: (id: number) => Promise<void>;
+  setCurrentUserInfo: React.Dispatch<
+    SetStateAction<{id: number; name: string} | undefined>
+  >;
 }
 
 export const SwiperContainer: FC<SwiperContainerProps> = ({
   users,
-  fetchUserPosts,
+  setCurrentUserInfo,
 }) => {
   const navigation = {
     prevEl: '.prevElButton',
@@ -34,7 +36,7 @@ export const SwiperContainer: FC<SwiperContainerProps> = ({
       >
         {users.map((user) => (
           <SwiperSlide
-            onClick={() => fetchUserPosts(user.id)}
+            onClick={() => setCurrentUserInfo({id: user.id, name: user.name})}
             key={user.id}
             className={styles.swiper__item}
           >

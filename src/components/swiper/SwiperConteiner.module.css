@@ -8,6 +8,10 @@
   margin-bottom: var(--margin-1);
 }
 
+.swiper__item {
+  cursor: pointer;
+}
+
 .swiper__ButtonWrapper {
   position: absolute;
   left: 50%;
