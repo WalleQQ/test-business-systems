@@ -13,6 +13,7 @@
 }
 
 .swiper__ButtonWrapper {
+  cursor: pointer;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

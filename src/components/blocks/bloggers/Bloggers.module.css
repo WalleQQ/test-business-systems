@@ -10,6 +10,8 @@
   line-height: var(--line-height-1);
   margin-bottom: var(--margin-1);
   text-align: center;
+  max-width: var(--width-6);
+  width: 100%;
 }
 
 .bloggers__text {
